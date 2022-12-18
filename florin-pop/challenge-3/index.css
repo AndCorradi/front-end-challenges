@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-100: #F4FAFA;
+  --primary-color: #DFEBEB;
+  --text-color: #10131C;
+
+  font-size: inherit;
+}
+
+a {
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+
+  font-size: 1rem;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+body * {
+  font-family: "Poppins", sans-serif;
+}
+
+form {
+  background-color: white;
+
+  width: min(30rem, 70%);
+  margin: auto;
+
+  padding: 3.5rem;
+  border-radius: 2rem;
+
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.1);
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  font-size: 1.5rem;
+  font-family: "Libre Baskerville", serif;
+}
+
+.radio-wrapper {
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--primary-100);
+  border: 1px solid var(--primary-color);
+}
+
+.radio-wrapper input[type="radio"] {
+  appearance: none;
+  border: 1px solid var(--primary-color);
+  margin-top: -1px;
+  vertical-align: middle;
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.radio-wrapper input[type="radio"]:checked {
+  background-image: radial-gradient(white 35%, black 40%);
+}
+
+.radio-wrapper:not(:has(:checked)) {
+  opacity: 0.75;
+}
+
+.radio-wrapper p {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  margin-left: 2rem;
+}
+
+.radio-wrapper label {
+  margin-left: 0.5rem;
+}
+
+legend + .radio-wrapper {
+  margin-top: 2rem;
+}
+
+.radio-wrapper + .radio-wrapper {
+  margin-top: 0.75rem;
+}
+
+.radio-wrapper + .checkbox-wrapper {
+  margin-top: 2rem;
+}
+
+.checkbox-wrapper {
+  margin-left: 1rem;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  appearance: none;
+
+  margin-top: -1px;
+  vertical-align: middle;
+
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25rem;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked::before {
+  content: "✓";
+  padding-left: 0.2rem;
+}
+
+.checkbox-wrapper + .checkbox-wrapper {
+  margin-top: 0.75rem;
+}
+
+.checkbox-wrapper label {
+  font-size: 0.75rem;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-top: 2rem;
+  background-color: var(--text-color);
+  border: 0;
+  padding-block: 0.75rem;
+  color: white;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: hsl(225, 27%, 14%);
+}
+
+button + small {
+  text-align: center;
+  margin-top: 1.25rem;
+}
